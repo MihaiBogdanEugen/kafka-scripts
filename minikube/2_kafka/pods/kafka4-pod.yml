@@ -11,7 +11,7 @@ spec:
   containers:
   - name: kafka
     imagePullPolicy: Always 
-    image: mbe1224/kafka:1.0.0
+    image: mbe1224/kafka
     env:
     - name: KAFKA_BROKER_ID
       value: "4"

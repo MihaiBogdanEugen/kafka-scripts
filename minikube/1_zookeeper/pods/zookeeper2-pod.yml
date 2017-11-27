@@ -11,12 +11,10 @@ spec:
   containers:
   - name: zookeeper
     imagePullPolicy: Always 
-    image: mbe1224/zookeeper:3.5.3-beta
+    image: mbe1224/zookeeper
     env:
-    - name: IS_MINIKUBE
-      value: "true"    
     - name: ZOOKEEPER_SERVER_ID
-      value: "dummy"
+      value: "2"
     - name: ZOOKEEPER_CLIENT_PORT
       value: "2181"
     - name: ZOOKEEPER_4LW_COMMANDS_WHITELIST
