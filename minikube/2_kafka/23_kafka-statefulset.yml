@@ -70,9 +70,9 @@ spec:
             port: 9092
           initialDelaySeconds: 10        
           timeoutSeconds: 1 
-        volumeMounts:
-        - name: datadir
-          mountPath: /var/lib/kafka
-      volumes:
-      - name: datadir
-        emptyDir: {} 
+      #   volumeMounts:
+      #   - name: datadir
+      #     mountPath: /var/lib/kafka
+      # volumes:
+      # - name: datadir
+      #   emptyDir: {} 
