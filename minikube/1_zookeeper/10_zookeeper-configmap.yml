@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: zk-cm
+  labels:
+    category: zookeeper
+data:
+  4lw.commands.whitelist: "ruok,stat,dump"
+  log4j.root.loglevel: "INFO"
