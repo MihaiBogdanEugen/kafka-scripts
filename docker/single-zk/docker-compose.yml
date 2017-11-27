@@ -1,0 +1,15 @@
+---
+version: '3'
+services:
+  zk:
+    image: mbe1224/zookeeper
+    ports:
+      - "2181:2181"
+      - "2888:2888"
+      - "3888:3888" 
+    environment:
+      ZOOKEEPER_4LW_COMMANDS_WHITELIST: "ruok,stat"
+      ZOOKEEPER_ADMIN_ENABLESERVER: "true"
+      ZOOKEEPER_ADMIN_SERVERPORT: 8000            
+    network_mode: host                   
+...
