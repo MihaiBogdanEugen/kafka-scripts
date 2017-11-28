@@ -78,12 +78,9 @@ spec:
             - '[ "imok" = "$(echo ruok | nc -w 1 -q 1 localhost 2181)" ]' 
           initialDelaySeconds: 10
           timeoutSeconds: 5
-        volumeMounts:
-        - name: datadir
-          mountPath: /var/lib/zookeeper
-      volumes:
-      - name: datadir
-        emptyDir: {}
+  #       volumeMounts:
+  #       - name: datadir
+  #         mountPath: /var/lib/zookeeper
   # volumeClaimTemplates:
   # - metadata:
   #     name: datadir
