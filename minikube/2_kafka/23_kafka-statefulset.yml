@@ -23,8 +23,6 @@ spec:
         env:
         - name: IS_KUBERNETES
           value: "true"     
-        - name: KUBERNETES_SERVICE_NAME
-          value: "kfk-svc-svc.default.svc.cluster.local"
         - name: KAFKA_ZOOKEEPER_CONNECT
           value: "zk-0.zk-svc.default.svc.cluster.local:2181,zk-1.zk-svc.default.svc.cluster.local:2181,zk-2.zk-svc.default.svc.cluster.local:2181"    
         - name: KAFKA_LISTENERS

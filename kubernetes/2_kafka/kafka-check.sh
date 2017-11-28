@@ -9,7 +9,7 @@ CONFIG_FILE=$1
 
 for pod in `kubectl --kubeconfig $CONFIG_FILE --namespace=kafka get pods -l app=kfk -o json | jq -r '[.items[].metadata.name]' | jq .[] | tr -d '"'`; do
   echo "Kafka running on pod $pod knows about"
-  kubectl --kubeconfig $CONFIG_FILE --namespace=kafka exec -it $pod -- bash -c "./opt/kafka/bin/kafka-broker-api-versions.sh --bootstrap-server localhost:9092 | grep kafka -c"
+  kubectl --kubeconfig $CONFIG_FILE --namespace=kafka exec -it $pod -- bash -c "./opt/kafka/bin/kafka-broker-api-versions.sh --bootstrap-server localhost:9092 | grep kfk -c"
   echo "brokers"
   echo "--------------------------------------------"
 done
